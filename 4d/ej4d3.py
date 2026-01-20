@@ -1,4 +1,6 @@
 """
+Jefferson Vivas
+
 Implementa una función 'read_and_write', no recibe ningún parámetro debido a
 que, dentro de la misma se debe solicitar la entrada de 2 datos mediante
 teclado.
@@ -22,39 +24,22 @@ Ejemplo:
     Salida:
         Julio
         30
-
-Enunciat:
-
-Implementa una funció 'read_and_write', no rep cap paràmetre a causa de
-que, dins de la mateixa cal sol·licitar l'entrada de 2 dades mitjançant
-teclat.
-
-En el moment de sol·licitar l'ingrés de les dades s'ha de considerar el
-següent text.
-'Insert your name: ' El valor introduït ha de ser de tipus str.
-'Insert your age: ' El valor introduït ha de ser de tipus int.
-
-S'ha de crear un fitxer de text 'file.txt' on La informació entrada
-per consola s'ha de guardar en aquest fitxer i s'ha d'imprimir per consola
-des del fitxer de text.
-
-Paràmetre:
-No rep cap paràmetre.
-
-Exemple:
-     Entrada:
-         'Insert your name: ' Juliol
-         'Insert your age: ' 30
-     Sortida:
-         Juliol
-         30
-
 """
 
 def read_and_write():
     # Write here your code
-    pass
-
+    name = input("Insert your name: ")
+    age = int(input("Insert your age: "))
+    
+    # Escrbir los datos solicitados por terminal
+    with open ("file.txt", "w") as file:
+        file.write(name)
+        file.write(str(age))
+    
+    # Leer las lineas del archivo creado
+    with open ("file.txt", "r") as file:
+        for linea in file:
+            print(linea)
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script

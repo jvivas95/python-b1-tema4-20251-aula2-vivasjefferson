@@ -1,4 +1,6 @@
 """
+Jefferson Vivas
+
 Enunciado:
 
 Crea una función llamada 'count_fruits(fruits_list)' que reciba como parámetro una lista
@@ -20,35 +22,23 @@ Ejemplo:
     Salida:
     {'apple': 2, 'banana': 2, 'orange': 1, 'kiwi': 4}
 
-Enunciat:
-
-Crea una funció anomenada 'count_fruits(fruits_list)' que rebi com a paràmetre una llista
-de fruites i retorni un diccionari on cada clau sigui el nom d'una
-fruita i el seu valor sigui la quantitat de vegades que apareix a la llista.
-
-Paràmetres:
-     fruits_list: llista de fruites
-
-Retorn:
-     Un diccionari on cada clau és el nom d'una fruita i el seu valor és
-     la quantitat de vegades que apareix a la llista.
-
-Exemple:
-     Entrada:
-     fruits = ['apple', 'banana', 'orange', 'apple', 'kiwi', 'banana', 'kiwi', 'kiwi', 'kiwi']
-     count_fruits(fruits)
-
-     Sortida:
-     {'apple': 2, 'banana': 2, 'orange': 1, 'kiwi': 4}    
 """
+# frutas = ['apple', 'banana', 'orange', 'apple', 'kiwi', 'banana', 'kiwi', 'kiwi', 'kiwi']
 
+# # fruta = frutas.count('kiwi')
+
+# # print(fruta)
 
 def count_fruits(fruits_list):
     # Write here your code
-    pass
+    contador_fruta = 0
+    frutas = {}
+    for fruta in fruits_list:
+        frutas[fruta] = fruits_list.count(fruta)
+    return frutas
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
 
-# fruits = ['apple', 'banana', 'orange', 'apple', 'kiwi', 'banana', 'kiwi', 'kiwi', 'kiwi']
-# print(count_fruits(fruits))
+fruits = ['apple', 'banana', 'orange', 'apple', 'kiwi', 'banana', 'kiwi', 'kiwi', 'kiwi']
+print(count_fruits(fruits))

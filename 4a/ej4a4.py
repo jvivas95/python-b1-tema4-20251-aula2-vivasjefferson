@@ -1,4 +1,6 @@
 """
+Jefferson Vivas
+
 Enunciado:
 Crea una función llamada 'add_elapsed_time(dictionary, key, value)' que
 almacenará el último registro del tiempo de carrera de los atletas.
@@ -24,20 +26,19 @@ Ejemplo:
     Salida:
     {'Juan': 8.6, 'Peter': 14.2, 'Sofia': 6.5, 'Alex': 8.7}
 
-Enunciat:
-
 """
 
 
 def add_elapsed_time(dictionary, key, value):
     # Write here your code
-    pass
+    dictionary[key] = value
+    return dictionary
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
 
-# my_dict = {"Juan": 9.5, "Peter": 14.2, "Sofia": 6.5, "Alex": 8.7}
-# my_dict = add_elapsed_time(my_dict, "Juan", 8.8)
-# my_dict = add_elapsed_time(my_dict, "Alice", 7.3)
-# print(my_dict)
+my_dict = {"Juan": 9.5, "Peter": 14.2, "Sofia": 6.5, "Alex": 8.7}
+my_dict = add_elapsed_time(my_dict, "Juan", 8.8)
+my_dict = add_elapsed_time(my_dict, "Alice", 7.3)
+print(my_dict)
